@@ -1,0 +1,66 @@
+@import "normalize";
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #020202;
+  color: #CCCCCC;
+  font-size: 24px;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  margin-bottom: 48px;
+  margin-top: 0;
+}
+
+.progress-bar {
+  position: relative;
+  height: 50px;
+  width: 90%;
+  border-radius: 50px;
+  background: #555;
+  overflow: hidden;
+
+  span {
+    position: absolute;
+    line-height: 50px;
+    width: 100%;
+    text-align: center;
+    z-index: 10;
+  }
+}
+
+.progress-bar {
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 50%;
+    background: #1e90ff;
+    animation: animate 12s linear infinite;
+    border-radius: 50px;
+  }
+}
+
+@keyframes animate {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
