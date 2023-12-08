@@ -1,2 +1,4 @@
-// (Модуль пользовательского интерфейса) - Этот модуль будет обрабатывать все взаимодействия
-// с пользовательским интерфейсом. Обновление отображаемого времени, нажатия кнопок и т.д.
+export class Ui {
+  btnNewPomodoro = document.querySelector('#btnNewPomodoro');
+  modalNewPomodoro = document.querySelector('#modalNewPomodoro');
+}
