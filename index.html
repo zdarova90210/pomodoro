@@ -9,15 +9,17 @@
 <body>
 <h1>Pomodoro timer</h1>
 
-<button id="btnNewPomodoro" class="mb-4">New pomodoro</button>
-
 <div class="progress-bar">
-  <span>Text inside Loader line</span>
+  <div class="progress-bar__progress"></div>
+  <span class="progress-bar__text">Text inside Loader line</span>
 </div>
 
-<div id="modalNewPomodoro" class="modal">
-  <span class="close-button">&times;</span>
-  <h2>Pomodoro Settings</h2>
+<div class="actions">
+  <button class="btn" id="btnStart">Start</button>
+  <button class="btn" id="btnPause">Pause</button>
+  <button class="btn" id="btnResume">Resume</button>
+  <button class="btn" id="btnReset">Reset</button>
 </div>
+
 </body>
 </html>
