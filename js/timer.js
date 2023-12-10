@@ -1,6 +1,10 @@
+import {Ui} from './ui.js'
+
 export class Timer {
-  constructor() {
+  constructor(time) {
     this.intervalId = null;
+    this.seconds = time;
+    this.uiInstance = new Ui(this);
   }
 
   startTimer(time) {
@@ -24,6 +28,7 @@ export class Timer {
         clearInterval(this.intervalId);
       } else {
         this.seconds--;
+        this.uiInstance.timerTextContainer.innerText = this.seconds;
         console.log(this.seconds);
       }
     }, 1000);

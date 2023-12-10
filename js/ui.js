@@ -1,30 +1,28 @@
-import { Timer } from "./timer.js";
-
-
 export class Ui {
-  btnStartPomodoro = document.querySelector('#btnStart');
-  btnPausePomodoro = document.querySelector('#btnPause');
-  btnResumePomodoro = document.querySelector('#btnResume');
-  btnResetPomodoro = document.querySelector('#btnReset');
+  btnStart = document.querySelector('#btnStart');
+  btnPause = document.querySelector('#btnPause');
+  btnResume = document.querySelector('#btnResume');
+  btnReset = document.querySelector('#btnReset');
+  timerTextContainer = document.querySelector('#timerText');
+  taskTextContainer = document.querySelector('#taskText');
 
-  constructor() {
-    this.timer = new Timer();
+  constructor(timer) {
+    this.timer = timer;
 
-    this.btnStartPomodoro.addEventListener('click', () => {
+    this.btnStart.addEventListener('click', () => {
       this.timer.startTimer(60);
     });
 
-    this.btnPausePomodoro.addEventListener('click', () => {
+    this.btnPause.addEventListener('click', () => {
       this.timer.pauseTimer();
     })
 
-    this.btnResumePomodoro.addEventListener('click', () => {
+    this.btnResume.addEventListener('click', () => {
       this.timer.resumeTimer();
     })
 
-    this.btnResetPomodoro.addEventListener('click', () => {
+    this.btnReset.addEventListener('click', () => {
       this.timer.resetTimer();
     })
-
   }
 }
