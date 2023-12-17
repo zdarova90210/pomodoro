@@ -1,28 +1,8 @@
 export class Ui {
-  btnStart = document.querySelector('#btnStart');
-  btnPause = document.querySelector('#btnPause');
-  btnResume = document.querySelector('#btnResume');
-  btnReset = document.querySelector('#btnReset');
-  timerTextContainer = document.querySelector('#timerText');
-  taskTextContainer = document.querySelector('#taskText');
-
-  constructor(timer) {
-    this.timer = timer;
-
-    this.btnStart.addEventListener('click', () => {
-      this.timer.startTimer(60);
-    });
-
-    this.btnPause.addEventListener('click', () => {
-      this.timer.pauseTimer();
-    })
-
-    this.btnResume.addEventListener('click', () => {
-      this.timer.resumeTimer();
-    })
-
-    this.btnReset.addEventListener('click', () => {
-      this.timer.resetTimer();
-    })
-  }
+  static btnStart = document.querySelector('#btnStart');
+  static btnPause = document.querySelector('#btnPause');
+  static btnResume = document.querySelector('#btnResume');
+  static btnReset = document.querySelector('#btnReset');
+  static timerTextContainer = document.querySelector('#timerText');
+  static taskTextContainer = document.querySelector('#taskText');
 }

@@ -1,13 +1,11 @@
-import {Ui} from './ui.js'
+import { Ui } from "./ui.js";
 
 export class Timer {
-  constructor(time) {
-    this.intervalId = null;
-    this.seconds = time;
-    this.uiInstance = new Ui(this);
-  }
+  intervalId = null;
+  seconds = 60;
 
-  startTimer(time) {
+  static startTimer(time = 60) {
+    console.log(time);
     console.log('startTimer');
     if (!time && !this.seconds) {
       throw new Error('Please set time before start pomodoro.')
@@ -28,24 +26,24 @@ export class Timer {
         clearInterval(this.intervalId);
       } else {
         this.seconds--;
-        this.uiInstance.timerTextContainer.innerText = this.seconds;
+        Ui.timerTextContainer.innerText = this.seconds;
         console.log(this.seconds);
       }
     }, 1000);
   }
 
-  pauseTimer() {
+  static pauseTimer() {
     console.log('pauseTimer');
     clearInterval(this.intervalId);
   }
 
-  resumeTimer() {
+  static resumeTimer() {
     console.log('resumeTimer');
     this.startTimer()
   }
 
 
-  resetTimer() {
+  static resetTimer() {
     console.log('resetTimer');
     clearInterval(this.intervalId);
     this.seconds = null;
