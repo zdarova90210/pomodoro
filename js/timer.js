@@ -1,8 +1,8 @@
-import { Ui } from "./ui.js";
+import * as UiElements from "./ui.js";
 
 export class Timer {
-  intervalId = null;
-  seconds = 60;
+  static intervalId = null;
+  static seconds = 60;
 
   static startTimer(time = 60) {
     console.log(time);
@@ -26,7 +26,7 @@ export class Timer {
         clearInterval(this.intervalId);
       } else {
         this.seconds--;
-        Ui.timerTextContainer.innerText = this.seconds;
+        UiElements.timerTextContainer.innerText = this.seconds;
         console.log(this.seconds);
       }
     }, 1000);

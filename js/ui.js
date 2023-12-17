@@ -1,8 +1,6 @@
-export class Ui {
-  static btnStart = document.querySelector('#btnStart');
-  static btnPause = document.querySelector('#btnPause');
-  static btnResume = document.querySelector('#btnResume');
-  static btnReset = document.querySelector('#btnReset');
-  static timerTextContainer = document.querySelector('#timerText');
-  static taskTextContainer = document.querySelector('#taskText');
-}
+export const btnStart = document.querySelector('#btnStart');
+export const btnPause = document.querySelector('#btnPause');
+export const btnResume = document.querySelector('#btnResume');
+export const btnReset = document.querySelector('#btnReset');
+export const timerTextContainer = document.querySelector('#timerText');
+export const taskTextContainer = document.querySelector('#taskText');
