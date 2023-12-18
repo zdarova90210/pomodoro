@@ -1,5 +1,8 @@
 import * as UiElements from "./ui.js";
 
+// TODO: избавиться от static.
+// TODO: разобраться является ли экспорт дефолт нью класс чем-то вроде синглтона.
+
 export class Timer {
   static intervalId = null;
   static seconds = 60;
