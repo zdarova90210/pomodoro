@@ -1,4 +1,7 @@
 @import "normalize";
+@import "common.scss";
+@import "modal.scss";
+@import "btn.scss";
 
 *, *:before, *:after {
   box-sizing: border-box;
@@ -27,23 +30,12 @@ h1 {
 
 .progress-bar {
   position: relative;
-  height: 50px;
+  height: 32px;
   width: 90%;
-  border-radius: 50px;
   background: #555;
   overflow: hidden;
 
-  span {
-    position: absolute;
-    line-height: 50px;
-    width: 100%;
-    text-align: center;
-    z-index: 10;
-  }
-}
-
-.progress-bar {
-  &:before {
+  &__progress {
     content: '';
     position: absolute;
     top: 0;
@@ -51,16 +43,24 @@ h1 {
     height: 100%;
     width: 50%;
     background: #1e90ff;
-    animation: animate 12s linear infinite;
-    border-radius: 50px;
+  }
+
+  &__text {
+    position: absolute;
+    font-size: 18px;
+    line-height: 32px;
+    width: 100%;
+    text-align: center;
   }
 }
 
-@keyframes animate {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 100%;
-  }
+.progress-bar {
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 8px;
+  margin-top: 16px;
 }

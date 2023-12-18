@@ -1,2 +1,6 @@
-// (Модуль пользовательского интерфейса) - Этот модуль будет обрабатывать все взаимодействия
-// с пользовательским интерфейсом. Обновление отображаемого времени, нажатия кнопок и т.д.
+export const btnStart = document.querySelector('#btnStart');
+export const btnPause = document.querySelector('#btnPause');
+export const btnResume = document.querySelector('#btnResume');
+export const btnReset = document.querySelector('#btnReset');
+export const timerTextContainer = document.querySelector('#timerText');
+export const taskTextContainer = document.querySelector('#taskText');

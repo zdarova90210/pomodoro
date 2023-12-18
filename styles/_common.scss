@@ -1,0 +1,41 @@
+.m {
+  &t {
+    &-4 {
+      margin-top: 4px;
+    }
+
+    &-8 {
+      margin-top: 8px;
+    }
+  }
+
+  &r {
+    &-4 {
+      margin-right: 4px;
+    }
+
+    &-8 {
+      margin-right: 8px;
+    }
+  }
+
+  &b {
+    &-4 {
+      margin-bottom: 4px;
+    }
+
+    &-8 {
+      margin-bottom: 8px;
+    }
+  }
+
+  &l {
+    &-4 {
+      margin-left: 4px;
+    }
+
+    &-8 {
+      margin-left: 8px;
+    }
+  }
+}
